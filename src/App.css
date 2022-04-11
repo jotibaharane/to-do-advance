@@ -1,38 +1,61 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=BhuTuka+Expanded+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+ 
+}
+body {
+  background-color: aliceblue;
+}
+
+/* ********************Well-come Page************************** */
+.wellContainer {
+  width: 400px;
+  height: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+.wellLogo {
+  width: 100px;
+}
+.wellHead {
+  display: inline-block;
+  background-color: blue;
+  font-family: "Bebas Neue", cursive;
+  display: flex;
+  align-content: center;
+}
+.wellHead h1 {
+  margin-top: 30px;
+  margin-left: 40px;
+  color: white;
+  letter-spacing: 2px;
+}
+.wellBody {
+  background-color: bisque;
+  width: 100%;
+  height: 400px;
+  font-family: "BhuTuka Expanded One", cursive;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.wellBody P {
+  padding-top: 90px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  word-spacing: 2px;
+  font-size: x-large;
+  text-align: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.wellBtn {
+  margin-top: 40px;
+  margin-right: 110px;
+  margin-left: auto;
+  padding: 5px 18px;
+  font-size: 20px;
+  border-radius: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.wellBtn:hover {
+  background-color: rgb(97, 216, 133);
 }

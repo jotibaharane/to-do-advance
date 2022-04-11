@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React, { useEffect, useRef, useState} from "react";
+import WellCome from "./components/UI/WellCome";
+import TaskBoard from "./components/UI/TaskBoard";
+import Update from "./components/inpute/Update"
+import Add from "./components/inpute/Add";
+import { Routes, Route} from "react-router-dom";
 
 function App() {
+  let arr=[]
+  let old=JSON.parse(localStorage.getItem("data"))
+  if(old)
+      {
+        arr=old
+      }
+  const [input,setInpute]=useState(arr)
+  // const togal=useRef([])
+  // togal.current=JSON.parse(localStorage.getItem("data"))
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Routes>
+        <Route path="/" element={input.length===0?  <WellCome />:<TaskBoard setInpute={setInpute}/> } />
+        <Route path="/add" element={<Add setInpute={setInpute} />} />
+        <Route path="/update/:id" element={<Update setInpute={setInpute} />} />
+      </Routes>
     </div>
   );
 }
